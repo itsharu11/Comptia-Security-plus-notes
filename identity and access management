@@ -1,0 +1,240 @@
+Identification - It occurs when users claim their identity with identifiers.
+
+Authentication - When a user proves the claimed identity
+
+Authorization - Access control systems provide authorization by granting resource access to resources based on permission granted to the identity.
+
+Accounting - A method which tracks users activity and record the activity logs.
+
+Audit trail - Allows security professionals to re-create the events that preceded a security incident.
+
+Factors or Authentication - Something you know, Something you have, Something you are, Somewhere you are, Something you do
+
+Something you know - It is an authentication factor refers to a shared secret, such as password or pin. This factor is least secure.
+
+Password security concepts - Password Complexity, Training user about password behaviors, Password expiration, Password Recovery, Password history and password reuse, Group Policy, Password policy, Implement account lockout policies, changing default passwords.
+
+Password complexity - Password should be complex enough to be hard to guess.
+Not so long or complex that users need to write them down.
+Passphrases are often easier to remember.
+Minimum length, special characters, upper/lowercase, etc.
+
+Training users about passwords - Common habits related to password and their importance to the organization.
+
+Password expiration - An account enforcement policy that determines how many days a password can be used before the user is required to change it.
+
+Password recovery - The policies for recovering a password in the event a user forgets a password.
+
+Password history - remembers past passwords and prevents users from reusing passwords
+
+Password reuse - An account enforcement policy that determines the number of unique new passwords a user must use before an old password can be reused.
+
+Group policy - A centralized configuration management
+feature available for Active Directory on
+Windows Server systems.
+
+Group Policy Object (GPO) - Enables network administrators to define multiple rights and permissions to entire sets of users all at one time. Group policy is implemented on a domain controller within a domain.
+
+Password policy - A series of Group Policy settings that determine password security requirements, such as length, complexity, and age.
+
+Account lockout policies - A security policy used to specify how many invalid logon attempts should be tolerated before a user account is locked out.
+
+changing default password - A basic security practice is to change theses defaults before putting a system into use.
+
+Something you have - One of the three factors of authentication. This factor includes items such as proximity cards, smart cards, hardware tokens, and identification badges.
+
+Common example of something you have - Smart cards, common access card(CAC), Personal identification verification(PIV), Token or keyfobs, HMAC-based one-time password (HOTP), Time-based one-time password(TOTP).
+
+Smart cards - Credit card sized card containing a microchip for data storage and processing.
+
+Common Access Card (CAC) - A Department of Defense (DoD) smart card used for identification for active-duty and reserve military personnel along with civilian employees and special contractors.
+
+Personal identity verification - A specialized type of smart card used by U.S federal agencies.
+
+Tokens - small electronic devices that change user passwords automatically
+
+key fob - A small device containing a microchip used to generate unique passwords for logging on to a computer or a network.
+
+HOTP - HMAC-based One-Time Password (HOTP). An open standard used for creating one-time passwords, similar to those used in tokens or key fobs. It combines a secret key and an incrementing counter, and then uses HMAC to create a hash of the result. HOTP passwords do not expire until they are used.
+
+TOTP - Time-based One-Time Password. Similar to HOTP, but it uses a timestamp instead of a counter. One-time passwords created with TOTP expire after 30 seconds.
+
+Something you are - Authentication factor that relies on a physical characteristic (fingerprint, face, eye, palm)
+
+Common examples of something you are - Fingerprint scanner, Retina scanner, iris scanner, voice recognition, facial recognition.
+
+Biometric Errors - Accuracy of the biometric scanner to identify a personnel being false.
+
+False Acceptance Rate (FAR) - A measurement of the percentage of invalid users that will be falsely accepted by the system. This is called a Type II error. Type II errors are more dangerous than Type I errors.
+
+False Rejection Rate (FRR) - A measurement of valid users that will be falsely rejected by the system. This is called a Type I error.
+
+Crossover Error Rate (CER) - The point at which FRR equals FAR. Expressed as a percentage, this is the most important metric.
+
+Somewhere you are - An authentication factor indicating location, often using geolocation technologies.
+
+Something you do - An authentication factor indicating action, such as gestures on a touch screen.
+
+Dual-factor authentication - An authentication method that includes multiple methods for a single authentication transaction. Often referred to as "something you have and something you know," when the factors include a device such as a smart card and a secret such as a password or PIN.
+
+Multi-factor authentication - Ensures that a user is who they claim to be. The more factors used to determine a person's identity, the greater the trust of authenticity.
+
+Kerberos - An authentication system developed by the Massachusetts Institute of Technology (MIT) and used to verify the identity of networked users in Windows Active Directory domains.
+
+Kerberos Requirements - 1) A method of issuing tickets used for authentication -> Key distribution center responsible for TGTs.
+2) Time synchronization -> All systems to be synchronized with each other to mitigate replay attacks.
+3) A database of subject of users -> users which will request tickets or tokens from kerberos.
+
+NTLM - NEW TECHNOLOGY LAN MANAGER(NTLM) is a suite of protocols that provide authentication, integrity, and confidentiality within windows systems.
+
+NTLM versions - NTLM, NTLM v2, NTLM2
+
+NTLM - NTLM -> MD4 , neither MD4 or NTLM are recommended to use today.
+
+NTLMv2 - NTLMv2 was developed in response to attacks against the LM authentication protocol, It is a combination of Username, Logon name, password and more.
+
+NTLM2 - NTLM2 session improves NTLMv2 by adding mutual authentication. The client authenticates to the server and the server authenticates to the client.
+
+security package - It selects the most secure security protocols available between the systems.
+1) Kerberos
+2)NTLMv2
+3)NTLM2
+
+LDAP - Lightweight Directory Access Protocol. Language used to communicate with directories such as Microsoft's Active Directory. It provides a central location to manage user accounts and other directory objects. LDAP uses port 389 when unencrypted and port 636 when encrypted.
+
+LDAPS - Lightweight Directory Access Protocol Secure. A protocol used to encrypt LDAP traffic with TLS.
+
+single sign-on (SSO) - Using one authentication credential to access multiple accounts or applications.
+
+SSO and Transitive Trusts - A transitive trust creates an indirect trust relationship.
+
+SSO and SAML - Security Assertions Markup Language. An XML-based standard used to exchange authentication and authorization information between different parties. SAML provides SSO for web-based applications.
+
+Three Roles of SAML - 1) Principal 
+2) Identity Provider
+3) Service Provider
+
+Principal - It is the user that logs in.
+
+Identity Provider - It creates, maintains, identity information
+
+Service Provider - It provides services to the principal
+
+SAML and Authorization - SSO does not provide authorization.
+However many federation SSO systems, including SAML include the ability to transfer authorization data between their systems.
+
+SSO and Federation - Some SSO systems can connect OS or networks.
+This federated database provides central authentication in a nonhomogeneous environment.
+
+Federation - It require a federated identity management system that all members of the federation use.
+
+Federated identity - a means of linking a user's identity with their privileges in a manner that can be used across business boundaries(OS and Networks).
+
+shibbloleth - Its is one of the federated identity solutions, It is open source and freely available.
+It includes open SAML libraries written in C++ and Java
+
+OAuth - Technology that allows users to share resources stored on one site with a second site without forwarding their authentication credentials to the other site.
+
+OpenID Connect - An open source standard used for identification on the Internet. It is typically used with OAuth and it allows clients to verify the identity of end users without managing their credentials.
+
+Least Privilege - Granting users only the accesses that are required to perform their job functions.
+
+Need to Know - Defines the minimum level of access for subjects based on their job or business requirements
+
+Account Types - 1) End User accounts
+2) Privileged accounts
+3) Guest accounts
+4) Service accounts
+
+End user accounts - The accounts for most of the user.
+
+Privileged accounts - Individuals who have access to set "access rights" for users on a given system. Sometimes referred to as system or network administrative accounts.
+
+Guest accounts - created when guests guarantee their reservations or when they register at the front desk It grants limited access.
+
+Service accounts - Accounts used to provide privileged access used by system services and core applications.
+
+Two accounts for adminstrator - 1) day to day work
+2) Elevated privileges
+
+Benefits of 2 accounts for administrator - It reduces the exposure of the administrator account.
+
+Standard naming convention - Easier to identify resource location and purpose.
+Reduces time to troubleshoot events and issues.
+Reduces time to onboard/train new personnel.
+
+Prohibition Shared and Generic accounts - If multiple users share a single computer than it cannot implement basic authrization.
+
+Disablement policy - A policy that identifies when administrators should disable user accounts.
+
+Delete Account - If an administrator deletes an account then the files may remain encrypted forever unless the organization has key escrow or a recovery agent that can access files.
+
+Account Disablement Policy - Identifies what to do with accounts for employees who permanently leave or are on a leave of absence. 
+1) Terminated employee - ex-employee
+2) Leave of absence - absent for extended period
+3) Delete account - organization decides when account no longer needed
+
+Recovering accounts - 1) Enable a disabled account - Admin can reset the user's password and take control of the account.
+2) Recover a deleted account - It is possible to recover a deleted account but it is more complex.
+
+Time-of-Day restriction - When a user's logon hours are configured to restrict access to the network during certain times of the day and week.
+
+Location-based policies - Policies that prevent users from logging on from certain locations, or require that they log on only from specific locations.
+
+Expiring accounts - It is possible to set user accounts to expire automatically. When the account expires, the system disables it, and the user is no longer able to log using the account.
+
+Account Maintenance - the process of keeping a business's chart of accounts up to date by adding new accounts, changing titles of existing accounts, and deleting inactive accounts
+
+credential management - A secure repository for storing valuable authentication information on a mobile device.
+
+Access Control - Access control ensures that only authenticated and authorized entities can access resources.
+
+Terms for Access control models - 1) Subject - Users or groups that access an object.
+2) Object - Items such as files, folders, shares and printers that subject access.
+
+Access Control models - 1) Role-based access control (role-BAC)
+2) Rule-based access control (rule-BAC)
+3) Discretionary access control (DAC)
+4) Mandatory access control (MAC)
+5) Attribute-based access control (ABAC)
+
+Role-based access control - It uses roles to manage rights and permission for users.
+It is also called hierarchy-based or job-based
+1) Hierarchy-based - Top level roles have significantly more permission than lower-level roles.
+2) Job, task. function-based - The roles are centered on jobs or function that users need to perform.
+
+Group-based access control - A role-based access control method that uses groups as roles. 
+Configuring multiple computers by setting a single policy for enforcement.
+
+benefits of groups - The administrator would assign rights and permission to each user individually. This might work for less users, but quickly becomes unmanageable with more users.
+
+Rule Based Access Control (RBAC) - An access control model that is based on a list of predefined rules that determine what accesses should be granted. Some rules can be dynamic. Example intrusion prevention systems can detect attacks and then modify rules to block traffic from attacker.
+
+Discretionary access control - The owner determines who has access to the data and what privileges they have - user centric
+
+Security Identifier (SID) - A user- or group-specific number that is added to the access control list of a resource when a user or group is assigned access.
+
+Access control entries - The DACL is a list of Access Control Entries(ACEs).
+Each ACE is composed of SID and the permission(s) granted to the SID.
+
+Trojans - Programs that look useful, but actually cause damage to your computer
+
+Mandatory access control - The mandatory access control model uses labels to determine access.
+The administrator assigns labels to both subjects (users) and objects (Files and Folders.
+When the labels match, the system can grant a subject access to an object.
+Military units make wide use of this model to protect data.
+
+Example operating system for Mandatory access control - Security-enhanced Linux(SELinux) is one of the few operating systems using mandatory access control model.
+
+Labels and Lattice - The MAC model uses different levels of security to classify both the users and the data. 
+These levels are defined in a lattice. 
+The lattice can be a complex relationship between different ordered sets of labels.
+These labels define boundaries for the security levels.
+
+Attribute-Based Access Control - An attribute-based access control(ABAC) evaluates attributes and grants access based on the value of these attributes.
+Attributes can be characteristic, environment or resource.
+
+Policy statements for ABAC - Subject - User
+Object - Resource
+Action - What the user is attempting to do.
+Environment - Everything outside of the subject and object attributes.
