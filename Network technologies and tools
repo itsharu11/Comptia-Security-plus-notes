@@ -1,0 +1,545 @@
+Networking protocol - A set of rules, algorithms, messages, and other mechanisms that enable software and hardware in networked devices to communicate effectively.
+
+Default HTTP port - Port 80 is the default port for HTTP
+
+TCP (Transmission Control Protocol) - Works at both ends of most Internet communication to ensure a perfect copy of a message is sent.
+
+TCP Handshake - The protocol by which a client and server machine establish communication for the transfer of data.
+
+TCP handshake process - It is a three-way handshake.
+The client sends a SYN packet.
+The server responds with SYN/ACK.
+The client responds with ACK.
+SYN -> SYN/ACK -> ACK
+
+TCP/IP (Transmission Control Protocol/Internet Protocol) - This traffic is either connection-oriented TCP traffic or connectionless UDP.
+
+UDP (User Datagram Protocol) - connectionless protocol that does not require a connection to send a packet and does not guarantee that the packet arrives at its destination.
+
+Example of UDP - ICMP traffic such as ping command and audio/video streaming use UDP.
+
+IP - Internet protocol identifies hosts in a TCP/IP network and delivers traffic from one host to another using IP address.
+
+IPv4 - The Internet Protocol version 4 is the dominant protocol for routing traffic on the Internet, specifying "to" and "from" addresses using a dotted decimal such as "122.45.255.0".
+It is 32-bit address.
+
+IPv6 - The Internet Protocol version 6 provides a large number of new addresses to route Internet traffic, using "from" and "to" addresses written as colon-hexadecimal notation, such as "fe80::42:acff:feaa:1bf0".
+It is a 128-bit address protocol.
+
+ICMP - Internet Control Message Protocol
+It is used for testing basic connectivity and includes tools such as ping, pathping and tracert.
+
+ARP - Address resolution protocol.
+It resolves IPv4 address to Media Access Control (MAC) address.
+It is also called physical or hardware address.
+
+Use of ARP - The TCP/IP transfer the packet from one network to another.
+The ARP ensures that the packet reaches the correct host.
+
+ARP poisoning - ARP packets to give clients false hardware address updates and attackers use it to redirect or interrupt network traffic.
+an attack that convinces the network that the attacker's MAC address is the one associated with an allowed address so that traffic is wrongly sent to the attacker's machine.
+
+NDP - Neighbor Discovery Protocol 
+A protocol that is part of the IPv6 protocol suite, used to discover and exchange information about devices on the same subnet (neighbors). In particular, it replaces the IPv4 ARP protocol.
+
+Protocols based on Use Cases - Voce and Video Use Case
+File Transfer Use Case
+Email and Web Use Case
+Directory Services Use Case
+Remote Access Use Case
+Time Synchronization Use Case
+Network Address Allocation Use Case
+Domain Name resolution Use Case
+Subscription Service Use Case
+
+Voice and Video Use Case - UDP is commonly used.
+RTP - Real Time Transport protocol delivers audio and video over IP networks.
+
+SRTP - Secure Real Time Protocol
+A streaming audio and video protocol that uses AES for confidentiality and SHA-1 for integrity.
+It provides protection against replay attacks.
+SRTP can be used for both unicast and multi-cast transmission.
+
+File transfer Use Case - Some use cases are -
+transmit data, ensure confidentiality, ensure secure connection.
+
+Data-in-transit - Any traffic sent over a network.
+
+FTP - File Transfer Protocol 
+an internet standard that permits file uploading and downloading to and from other computers on the internet
+
+Modes in FTP - Active mode - TCP 21 Control signals
+ TCP 20 Data
+Passive mode - TCP 21 control signals
+ TCP random for Data
+
+TFTP - Trivial File Transfer Protocol
+A simple version of FTP that uses UDP port 69 as the transport protocol, and does not require a logon to the remote host.
+
+SSH - Secure Shell
+It encrypts traffic in transit and can be used to encrypt other protocols such as FTP.
+
+SCP - Secure Copy Protocol
+SCP was one of the first protocols used to transfer data securely between two hosts and thus might have replaced FTP. SCP works well but lacks features such as a directory listing.
+
+SSL - Secure Sockets Layer.
+It was the primary method used to secure HTTP traffic as Hypertext Transfer Protocol Secure (HTTPS).
+It also decrypts other traffic like SMTP, LDAP but it is not recommended.
+
+TLS - (Transport Layer Security) An update of the Secure Sockets Layer (SSL) protocol for encrypting data before it is transmitted over a network
+
+STARTTLS - A command (not an acronym) used to upgrade an unencrypted connection to an encrypted connection on the same port.
+
+IPSec (Internet Protocol Security) - A set of open, non-proprietary standards that you can use to secure data as it travels across the network or the Internet through data authentication and encryption.
+
+Two main components of IPsec - Authentication Header (AH)
+Encapsulating security payload (ESP)
+
+Authentication Header (AH) - This provides connectionless integrity and the authentication of data. It also provides protection versus replay attacks. Protocol ID number 51.
+
+Encapsulating Security Payload (ESP) - An IPSec component that provides the same services as AH but also provides confidentiality when sending data.
+Protocol ID number 50.
+
+Internet Key Exchange (IKE) - Used by IPSec to create a master key, which is in turn used to generate bulk encryption keys for encrypting data. It uses UDP over port 500 to create a security association for the VPN.
+
+SFTP - Secure File Transfer Protocol. An extension of Secure Shell (SSH) using SSH to transmit the files in an encrypted format. SFTP transmits data using TCP port 22.
+
+FTPS - File Transfer Protocol Secure. An extension of FTP that uses SSL or TLS to encrypt FTP traffic. Some implementations of FTPS use ports 989 and 990.
+
+Difference SFTP and FTPS - SFTP - SSH
+FTPS - TLS
+
+SSL drawback - Vulnerable to POODLE attack.
+Padding oracle on Downgraded Legacy Encryption.
+
+Email and web use cases - Common protocols - 
+SMTP, POP3 and Secure POP, IMAP4 and secure IMAP,
+HTTP, HTTPS.
+
+SMTP - Simple Mail Transfer Protocol.
+It transfers mail between clients and SMTP servers.
+It uses TCP 25.
+It unofficially uses port 465 with SSL and port 587 with TLS.
+
+POP3 and Secure POP - Post Office Protocol v3 transfers email from server down to clients.
+It uses TCP port 110.
+Encrypts with SSL or TLS and use TCP 995.
+
+IMAP4 and Secure IMAP - Internet Message Access Protocol version 4.
+It is used to store email on an email server.
+Allows user to organize and manage email in folders on the server.
+It uses port 143.
+Uses port 993 with SSL or TLS.
+
+HTTP - Hypertext Transfer Protocol transmits web traffic on the internet and in intranets.
+Common language to display web pages.
+
+HTTPS - It encrypts web traffic.
+Encrypted with SSL or TLS and it uses 443.
+
+Directory service use case - Network operating system commonly use a directory service to streamline management and implement security.
+A common use case is to provide secure access to the internet access the network.
+Kerberos, LDAP, Group policy.
+
+Kerberos - It is an authentication protocol.
+It uses key distribution center to issue timestamped tickets.
+It uses UDP 88.
+
+LDAP - A protocol used to access information stored in a directory.
+It provides clear syntax for object identification and management.
+It uses TCP port 389.
+
+LDAPS - Lightweight Directory Access Protocol Secure.
+Encrypts data with TLS using TCP port 636.
+
+Group policy - Administrators use Group policy objects to configure settings.
+They apply these to GPOs to users and computers within the domain.
+
+Remote access use case - administrators implement SSH to meet a use case of supporting remote access.
+Connect to remote systems for administration and secure the Netcat transmission with SSH.
+
+Different method for remote access - SSH, Netcat, RDP, VPN
+
+RDP - Admins and clients use this to access remote systems.
+It uses TCP port 3389 or UDP 3389.
+TCP 3389 is more common.
+
+VPN relate to remote access - It is another method of supporting remote access use cases is with a virtual private network(VPN).
+
+Time synchronization use case - Systems need to be using the same time.
+example Kerberos - all systems are synchronized within five minutes of each other.
+
+Windows Time Service - It is used to locate reliable Internet server running the Network Time Protocol.
+
+NTP - a protocol used to synchronize clocks on network devices.
+It uses complex algorithms and queries.
+It is more accurate
+
+SNTP - Simple Network Time Protocol; port 123.
+It is simple and doesn't use these algorithms.
+It is not accurate as NTP.
+
+Network address allocation use case - IP address allocation to hosts.
+2 ways - manually, DHCP
+
+DHCP - Dynamic Host Configuration Protocol. A service used to dynamically assign TCP/IP configuration information to clients. DHCP is often used to assign IP addresses, subnet masks, default gateways, DNS server addresses, and much more.
+UDP 67, 68
+
+Private IP address - Addresses used by organizations for nodes that need IP connectivity only within their enterprise network, but not external
+connections to the Internet.
+Private networks should only have private IP addresses.
+These are formally defined in RFC 1918.
+Unique local addresses start with the prefix of fc00.
+
+Domain name resolution use case - It resolves the host names to IP addresses.
+It uses DUP 53.
+
+Basic DNS query - Sometimes DNS response instantly with IP(cache).
+Sometimes it contacts another DNS for IP(DNS search).
+
+DNS Zones - DNS Servers host data in zones, like database.
+
+Records in Zones - A, AAAA, PTR, MX, CNAME, SOA
+
+A - It is also called host record.
+It records host name and IPv4 address.
+Client requests with forward lookup request, DNS responds with IPv4 address.
+
+AAAA - Record holds IPv6.
+
+PTR - Pointer Record
+Reverse DNS lookups; DNS client queries DNS with the IP address and is replied to with a name
+
+MX - Mail Exchanger record
+the host name for the mail server
+
+CNAME - A canonical name record is an alias of an existing record, thus allowing multiple DNS records to map to the same IP address.
+
+SOA - Start of Authority
+It includes information about the DNS zone and some of its settings.
+Time to Live setting
+
+Time to Live - It determines setting to determine how long to cache DNS results.
+TTL times are in seconds.
+
+Berkeley Internet Name Domain (BIND) - Most DNS server runs on this software with Unix or Linux OS.
+
+Microsoft DNS software - Microsoft networks use Microsoft DNS software.
+
+DNS zone transfers - DNS server share information with each other in a process known as a zone transfer.
+It include small number of updated records or all the records.
+It uses TCP port 53 for zone transfer.
+It uses UDP port 53 for name resolution queries.
+
+DNS Poisoning - An attack that substitutes DNS addresses so that the computer is automatically redirected to an attacker's device or a website.
+
+Method of DNS cache poisoning - One way is to modify the A or AAAA record in the DNS cache so it will send users to the IP address of the malicious web site.
+
+DNSSEC - Domain Name System Security Extensions. A suite of specifications used to protect the integrity of DNS records and prevent DNS poisoning attacks.
+It adds digital signature to each record that provides integrity.
+
+DNSSEC-enabled response - It is digitally signed record, the DNS server will know that it is a valid response.
+
+NSLOOKUP - A utility that is used to test and troubleshoot domain name servers.
+It can be used to verify that a DNS server can resolve specific host names or fully qualified domain names(FQDNs) to IP address.
+
+FQDNS - Fully Qualified Domain Name includes the host name and domain name.
+
+Dig command - It is a command line tool in Linux.
+It is used to verify that the DNS server is reachable and it can resolve names to IP address.
+
+@symbol - It is used to identify a specific DNS server.
+The prefix '@' refers to the domain name itself -- it essentially means no prefix.
+This is useful to pull all the records from a DNS zone.
+
+*symbol - something that stands for something else.
+The prefix * is a wildcard -- if a DNS request is made for an address that does not have a specific A record setup, then the wildcard IP address will be returned.
+
+Subscription services use case - It refers to subscription-based business model.
+Instead of selling software it uses a subscription model where users have to pay over time.
+
+Subscription services use case protocols - It mainly uses HTTPS for secure connection.
+Database servers maintain database of customers, along with the products they're renting.
+The connection is made secure with the help of HTTPS or TLS.
+System send automated emails to customers using SMTP when subscription is near end.
+
+Ports - Ports are logical numbers used by TCP/IP to identify what service or application should handle data received by a system.
+
+Number of ports - Both TCP and UDP use 65,536 ports
+
+Data transmission with ports - Admins open ports on firewalls and routers to allow the associated protocol into or out of a network.
+
+Disable unnecessary ports and services. - when the ports and services are disabled then it will block any attacks on these ports, services, and protocols.
+
+IANA - Internet Assigned Numbers Authority
+It maintains a list of official port assignments.
+They are divided into three ranges.
+
+Three ranges of IANA - 1. Well-known ports: 0-1023
+It assigns to commonly used protocols.
+2. Registered ports: 1024-49,151
+It registers these ports for companies, or multiple companies have the same port for a specific standard like Microsoft SQL server uses port 1443.
+3. Dynamic and private ports: 49,152-65,535
+It is available for use by any application.
+It use ports to temporarily map an application to a port.
+
+Temporary ports - Use to map and application to a port. These temporary ports are often called ephemeral ports indicating that they are short lived.
+
+Port scanner - Software to search a system for any port vulnerabilities.
+
+Combining IP address and the port - TCP/IP -> system -> port -> service or application.
+The TCP/IP uses IP to reach to the destination system and the it uses port to reach the specific application.
+
+IP address used to locate hosts - TCP/IP uses these IP addresses to get the packets from your computer to the web server and the web server's answer back to your computer.
+
+Server ports - When the system receives traffic with destination port of 80, the system know to send it to the service handling HTTP.
+Popular web servers include Apache and Internet Information services (IIS).
+
+Client ports - TCP/IP works with the client OS to maintain a table of client-side ports.
+This table associates port numbers with different application that are expecting return traffic.
+Client side ports start at 49,152 up to 65,535.
+When all used it will start over.
+
+Client ports working - Browser-> system -> unused port -> web server -> system -> unused port -> browser -> display
+--------------------------------------------------------------
+Request
+DN IP - 192.168.0.1
+DN PORT - 80
+SRC IP - 192.168.0.105
+SRC PORT - 49,152
+
+Response
+DN IP - 192.168.0.105
+DN PORT - 49,152
+SRC IP - 192.168.0.1
+SRC PORT - 80
+
+Ports in security - Client firewall doesn't need to allow incoming traffic on port 80 for this to work. The web client isn't hosting a web server with HTTP, so the client firewall would block incoming traffic on port 80.
+
+Port security and ACLs - It professionals modifying access control lists ACLs on routers and firewalls commonly refer to this as opening a port to allow traffic or closing port to block traffic.
+
+host - Any device with an IP address is a host, it is often referred as clients or nodes.
+
+Switch - It connect hosts together in a network.
+It can learn which computer attached to each of its physical ports.
+It uses this knowledge to create internal switched connection when two computers communicate with each other.
+
+Unicast - one on one communication
+
+Broadcast - one computer to all computers in the network
+
+Switching method - When a computer sends its firsts packet it will also append the mac address so it will be stored in the internal table.
+
+Security benefit of a switch - Protocols would not capture traffic going through the switch to other ports.
+Attacker can capture traffic in hub because its sends packets to all the ports.
+Switches also increase the efficiency of a network.
+
+Port security in switches - Port security limits the computer that can connect to physical ports on a switch.
+Administrators disable unused ports.
+MAC address filtering is another example of port security.
+It can also be configured to accept traffic only from a specific MAC address.
+Labor intensive but provides high security.
+
+Physical security of a switch - Many switches have a console port that administrators can use to monitor all traffic.
+The monitoring port will see all traffic in or out of the switch.
+This is good for troubleshooting.
+It need to be protected in a secure area to prevent an attacker from gaining access to it.
+
+Switching loop or bridge loop - When a user connects two ports of a switch together with a cable, it create a switching loop where the switch continuously send and resends unicast transmission
+
+Broadcast storm - High number of broadcast packets in short period of time.
+
+Spanning tree problem - It is a link management protocol that provides path redundancy while preventing undesirable loops in the network.
+In ethernet networks, only one active path can exist between two station in order for then to function properly.
+STP has three states listening, blocking, disabled, learning, forwarding, broken.
+
+RSTP - Rapid Spanning Tree Protocol. An improvement over STP.
+It includes discarding, learning, forwarding.
+discarding replaces disabled, blocking and listening.
+
+Flood attacks - A MAC flood attack attempts to overload a switch with different MAC addresses associated with the physical port.
+
+Mac flood attack method - An attacker send a large amount of traffic with spoofed MAC address to the same port.
+
+Result of MAC flood attack - Switch runs out of memory to store all the MAC addresses and enters fail-open state.
+It works as a hub, so an attacker can use protocol analyzer to collect all the traffic.
+
+Flood guard - 1. It limits the amount of memory used to store MAC addresses for each port.
+2. It sets the port to support only 1 MAC address.
+
+Flood guard action - Alert -> It will send a Simple Network Management protocol trap or error message in response.
+Action -> Disable update of MAC entries and disable port.
+
+Router - A router connects multiple network segments together into a single network and traffic between the segments.
+segment separated by a router can significantly improve overall performance.
+Subnetting networks create separate broadcast domains.
+
+Routers and ACLs - Rules to identify what traffic is allowed and what traffic is denied.
+rule-based management for the router and control inbound and outbound traffic.
+It provides basic packet filtering.
+
+Router ACLs filter packets - They filter packets based on IP address, ports, ICMP or IPsec.
+
+IP address and networks ACL - A rule to block access from any single computer based on the IP address.
+Block traffic from one subnet to another.
+
+Ports ACL - Filter traffic based on logical ports.
+Block incoming, outgoing or both traffic.
+
+Protocol numbers ACL - ICMP used for DOS. Block all ICMP traffic by blocking traffic using this protocol number.
+Same with other protocols it can be blocked if necessary.
+
+Implicit deny - It indicates that all traffic that isn't explicitly allowed is implicitly denied.
+
+Antispoofing - An attacker often spoofs IP with a different IP to hide the actual source of the packet.
+Antispoofing is to modify access list to allow or block IP addresses. Private IP used in Private network - allowed.
+Private IP on internet is a spoofed IP.
+
+Bridge - A network bridge connects multiple networks together and can be used instead of a router in some situations.
+
+Working of bridge - It directs traffic based on the destination MAC address.
+It learns MAC address by analyzing traffic and storing the information in an internal table.
+
+Firewall - It filters incoming and outgoing traffic for a single host or between networks.
+It can also block users from going to places that an administrator deems dangerous.
+It supports advanced content filtering.
+
+Types of firewall - 1. Host-based firewall
+2. Application-based firewall
+3. Network-based firewall
+4. stateless firewall
+5. stateful firewall
+6. web application firewall
+
+Host-based firewall - It monitors traffic going in and out of a single host, such as server or a work station.
+It monitors traffic passing through the NIC and prevent intrusion into the computer via the NIC.
+software-based firewalls used as host-based firewalls.
+
+Configuration in windows - It can be configured to allow or restrict inbound traffic and outbound rules to allow or restrict outbound traffic.
+
+Configuration in Linux - Linux systems support IPtables and many addition to iptables, such as ipv6, arptables and so on.
+Administrator commonly refer these as xtables.
+These rules work just like ACL.
+
+Application-based firewall - Software running in a system.
+Host-based firewall are commonly application-based.
+
+Network-based firewall - A network-based firewall is usually a dedicated system with additional software to monitor, filter and log traffic.
+A network-based firewall would have two or more network interface cards(NICs) and all traffic passes through the firewall.
+
+Stateless firewall - A firewall that manages each incoming packet as a stand-alone entity without regard to currently active connections. Stateless firewalls are faster than stateful firewalls, but are not as sophisticated.
+It has a security issue that it can be misconfigured ACLs.
+
+Stateless firewall format - 1. Permission
+2. protocol
+3. source
+4. destination
+5. port or protocol
+
+Stateless firewall permission - PERMIT or ALLOW to allow the traffic.
+DENY to block the traffic.
+
+Stateless firewall Protocol - TCP or UDP to block.
+When you need to block both using the same port then block the IP address.
+
+Stateless firewall source - Traffic comes from a source IP address.(to block them)
+Wildcards such as ANY or ALL to include all IP address.
+
+Stateless firewall destination - Traffic is addressed to a destination IP address.(block them to access).
+wildcards such as ANY or ALL to include all IP address.
+
+Stateless firewall port or protocol - Port or protocol to access the services or application.
+(to block)eq for equal, lt for less than, gt for greater than.
+
+Stateful firewall - A stateful firewall inspects traffic and makes decision based on the context, or state, of the traffic.
+It inspects traffic based on its state within a session.
+TCP session need 3-way handshake to establish session, if it detects session without the handshake then it recognizes this as suspicious traffic and can block it.
+
+Web application firewall - It is designed to protect a web application, which is commonly hosted on a web server.
+It is between server and client.
+
+DMZ - Demilitarized Zone
+It is a buffer zone between the internet and internal network.
+It allows access to services while segmenting access to the internal network.
+Internet clients can access services hosted on servers in DMZ.
+DMZ provides a layer of protection for the intranet.
+
+NAT - Network address translation is a protocol that translate public IP address to private IP addresses and private addresses back to public.
+It is enabled on an Internet-facing firewall.
+Network address and port translation, commonly called port address translation(PAT).
+Home router uses NAT.
+
+Benefits of NAT - 1. Public IP address don't need to be purchased for all clients.
+2. NAT hides internal computers from the internet.
+
+Drawbacks of NAT - IT is not compatible with IPsec.
+
+Types of NAT - 1. Static NAT
+2. Dynamic NAT
+
+Static NAT - A single public IP address in a one-to-one mapping.
+It maps private IP address with single public IP address.
+
+Dynamic NAT - It uses multiple public IP address in a one-to-many mapping.
+It decides which public IP address to use based on load.
+
+Network separation - 1. segregation - provides basic separation.
+2. segmentation - refers to putting traffic on different segments.
+3. Isolation - indicates the systems are completely separate.
+
+Physical isolation - It ensures that a network isn't connected to any other network
+
+Physical isolation example - SCADA - supervisory control and data acquisition, 
+it is common to ensure that they are isolated from any other network.
+
+Airgap - It is a metaphor for physical isolation, indicating that there is a gap of air between an isolated system and other system.
+
+Classification of airgap - If it is classified then it is red.
+If it is unclassified then it is black.
+Red must be physically separated from black cables.
+
+Logical separation and segmentation - Router and firewall provide basic level of separation and segmentation.
+Administrators use subnetting to divide larger IP address ranges into smaller ranges.
+
+Layer 2 switch - A type of switch that switches packets based on the MAC address.
+
+Layer 3 switch - A type of switch that operates as a router (layer 3).
+It switches packets based on IP address.
+It is not susceptible to ARP-based attacks.
+
+Isolating traffic with VLAN - A VLAN uses a switch to group several different computers into a virtual network.
+Group the computers based on department or function, and isolate traffic between the computers in the VLAN.
+
+Isolating traffic with VLAN with Layer 3 switch - A single Layer 3 switch can create multiple VLANs to separate the computers based on logical need rather than physical location.
+Administrator can easily add and subtract computers from VLANs.
+
+Media Gateway - A device that converts media data from one format to another.
+
+Proxy server - It forwards requests for services from clients.
+It provides caching to improve performance and reduce internet bandwidth usage.
+It monitors online activity and logs that record.
+
+Transparent proxy - It will accept and forward requests without modifying them. 
+It is simple to setup and provides caching.
+
+Non-transparent proxy - It can modify or filter requests.
+It can restrict what user can access with the use or URL filters.
+
+URL filter - It examines the requested URL and chooses to allow the request or deny the request.
+
+Reverse proxy - A reverse proxy accepts a request from a client, forwards it to a server that can fulfill it, and returns the server's response to the client
+
+Application proxy - It accepts requests, forwards the requests to the appropriate server and then sends the response to the original requestor.
+internet application exchange data using application programming interfaces(API).
+
+UTM - Unified threat management is a single solution that combines multiple security controls and also simplifying management requirements.
+It reduce the work of administrator without sacrificing security.
+It's common to place UTM appliance at network border.
+
+UTM appliance capabilities - 1. URL filtering - block access to sites based on URL.
+2. Malware inspection - Screen incoming data for known malware and blocks it.
+3. Content inspection - Monitors data streams and blocks malicious content.
+4. DDoS mitigator - It attempts to detect DDoS attacks and blocks them.
+
+Security issue with UTMs - Misconfigured content filter.
+It can send important mails and information to spam or trash
