@@ -1,0 +1,318 @@
+core security goals - CIA
+
+full form of CIA - Confidentiality, Integrity, Availability
+
+use case - It describes the goal of the organization.
+
+confidentiality - It prevents the unauthorized disclosure of data.
+
+methods to ensure confidentiality - Encryption, Access Control, Steganography and obfuscation
+
+encryption - It scrambles data and makes it unreadable by unauthorized personnel.
+
+full form of AES - Advanced Encryption Standards
+
+full form of PII - Personal identifiable information
+
+key elements of access control - Identification, Authentication, Authorization
+
+access control - Identification, Authentication and Authorization combined provide access control
+
+identification - When a user claim and identity
+
+Authentication - When a user prove the identity
+
+authorization - When user is granted or restricted to access the resources
+
+steganography - Hiding data in plain sight.
+
+obfuscation - transform the data such that its true meaning is not apparent to any unauthorized user or system in possession of it
+
+integrity - It provides assurance that data has not changed.
+
+two main methods to maintain integrity - Hashing, Digital signature, Certificates and Non-Repudiation.
+
+hashing - A hash is simply a number created by executing a hashing algorithm against data, such as a file or message.
+
+Role of hashing - It verifies integrity.
+
+common hashing algorithms - MD5(Message Digest 5)
+SHA(Secure Hashing Algorithm)
+HMAC(Hash-based Message Authentication Code)
+
+Digital Signature - A signature is mathematically generated from a hash of something to be signed, plus the private key for each address!
+
+Digital Signature provide - It provides authentication, non-repudiation and verifies integrity.
+
+non-repudiation - prevent an entity from denying that a given action took place. Things such as, email that is digitally signed, preventing the sender from denying the sending of the message.
+
+public key infrastructure - PKI refers to the system and processes used to issue and manage asymmetric keys and digital certificates
+
+Availablitity - It indicates that data and service are available when needed.
+
+increase Availability - Using redundancy and fault tolerance techniques and patching.
+
+redundancy - It adds duplication to critical systems and provides fault tolerance.
+
+common goal of fault tolerance and redundancy techniques. - It is used to remove each Single Point Of Failure(SPOF)
+
+common examples of fault tolerance and redundancies - Disk Redundancies, Server Redundancies, Load Balancing, Site Redundancies, Backups, Alternate Power, Cooling Systems.
+
+Disk Redundancies - Fault tolerant disk allow a system to continue to operate even if a disk fails.
+
+Server Redundancies - Redundant server ensure a service will continue to operate even if a sever fails.
+
+Load Balancing - Using multiple server to support one service.
+
+Site Redundancies - If a site is no longer functional, an alternate site can be a hot site or cold site. or warm site.
+
+hot, cold and warm site. - Hot Site -> Available 24/7
+Cold Site -> Equipment, Data and Personnel can be moved when needed.
+Warm Site -> It is a compromise between Hot and Cold Site.
+
+backup - An exact copy of a system's information. It can be used to restore when the original data is lost.
+
+Alternate Power - Uninterruptable Power Supplies(UPS) and Power Generators provide power.
+
+Cooling Systems - Heating, Ventilation and Air Conditioning (HVAC).It reduces outages from overheating.
+
+Patching - Patches are used to to fix bug, security issues, and random crashes. It ensures systems stay available with patching.
+
+Risk - It is a possibility of a threat exploiting a vulnerability resulting in a loss.
+
+Threat - It is a circumstance or an event that has the potential to compromise confidentiality, integrity, or availability.
+
+vulnerability - It is a weakness in a system hardware, Software or Configuration.
+
+security incident - It is an event or series of event that negatively affects the Confidentiality, Integrity or Availability of and organization.
+
+Risk Mitigation - It reduces the chances that a threat will exploit a vulnerability.
+
+Control Types - Control Types are used to increase security and reduce risk.
+
+List the control types - Technical Controls, Administrative Controls, Physical Controls, Preventive Controls, Detective Controls, Corrective Controls, Deterrent Controls, Compensating Controls.
+
+Three main types in which security controls are implemented - Technical Controls, Administrative Controls, Physical Controls
+
+Goals of security control - Preventive Controls, Detective Controls, Corrective Controls, Deterrent Controls, Compensating Controls
+
+Technical Control - it uses Technology to reduce vulnerabilities.
+
+Technology of technical control - It uses Encryption, Antivirus software, Intrusion detection system, Intrusion prevention system, Firewalls, Least privellege.
+
+Encryption - scrambles information into an alternative form. It protects confidentiality.
+
+Antivirus Software - Finds and removes malicious software
+ - Contains a database of known viruses
+ - Checks each time a file is opened, and alerts the user if a virus is found
+ - Because viruses are constantly being rewritten, has to be kept up to date
+
+Intrusion detection System - It monitors the traffic in a network or a host to detect intrusion.
+
+Intrusion prevention system - It monitors the traffic and provides protection against various threats.
+
+Firewall - A security barrier that prevents unauthorized access to or from private networks
+
+least privilege - Limiting access to information based on what is needed to perform a job function
+
+administrative controls - The methods mandated by organizational policies or other guidelines
+
+common administrative controls - Risk assessments, vulnerability assessment, Penetration testers.
+
+Risk assessment - It quantify and qualify risks within an organization.
+
+Quantitative risk assessment - It uses costs and asset values. (based on monetary value)
+
+Qualitative risk assessment - It is based on probability and impact.
+
+Vulnerability assessment - Vulnerability Assessment is the process of quantifying asset weaknesses.
+
+Penetration test - It meant to attempt to exploit for vulnerabilities.
+
+list administrative controls focus on physical security and the environment. - Awareness and training, configuration and change management, contingency planning, media protection, physical and environmental protection.
+
+Awareness and training - Aware and train users about organization's policy. (password policy, clean desk policy)
+
+Configuration and change management - It ensures that systems start in a secure, hardened state.
+Change management ensures that changes doesn't result in unwanted configuration errors.
+
+Contingency planning - It reduces the overall impact on an organization if an outage occurs.
+
+Media protection - It means to secure physical media such as USB, flash drives, external and internal hard drives, backup tapes.
+
+Physical and environmental protection - It means to secure locks, cams, heating and venitlation in an organization.
+
+Physical controls - The controls which can be physically touched is called physical controls. eg. fire control system.
+
+Preventive controls - It means to prevent security incidents.
+
+Examples of Preventive Controls - Hardening, security awareness and training, security guards, change management, account disablement policy.
+
+Hardening - Making a system more secure than its default configuration.
+
+Change management - A change will go through a change management process. so it prevents incidents.
+
+Account Disablement policy - Accounts are disabled when an employee leave.
+
+Detective controls - It attempts to detect when vulnerabilities have been exploited, resulting in a security incident.
+
+Examples of detective controls - Log monitoring, Trend analysis, Security Audi, Video Surveillance, Motion detection.
+
+Log monitoring - It records the activity of systems and networks.
+
+Trend analysis - Analyzing past alerts, system can identify attack trends. eg. IDS,IPS.
+
+Corrective controls - It attempts to revers the impact of an incident or problem after it has occured
+
+Examples of corrective controls - IPS, Backups and recovery
+
+Deterrent controls - It attempts to discourage a threat.
+
+Examples of deterrent controls - Cable locks, Hardware locks.
+
+What is the meaning of compensating controls. - It used to an alternative control of a primary control.
+
+Virtualization - It allows to host one or more virtual systems, or virtual machines on a single physical system.
+
+Hypervisor - It is a software that creates, runs and manages the VMs in the hypervisor. eg. VMware, virtualbox etc.
+
+Host in context of virtualization. - It is a physical system hosting the VMs. It requires more resources than a typical system.
+
+Guest in context of virtualization - It is the operation system running on the host system
+
+Elasticity and scalability - It is the ability to resize computing capacity based on the load.
+
+Benefit of virtualization - It provides the best return of investment(ROI) when an organization has many underutilized servers.
+
+Drawback of virtualization - It is a loss of confidentiality as virtual machine is just one or more files. It also makes them easy to steal.
+
+Types of Hypervisor - There are two types of hypervisor.
+Type -1 -> run directly on hardware.
+Type -2 -> run on software.
+
+Container virtualization - It runs services or application within isolated application cells.
+
+Benefits of container virtualization - It requires fewer resources and is more efficient than type II hypervisor.
+
+Drawback of container virtualization - Containers must have the same operating system of the host.
+
+Benefits of virtualization in secure network - It provides segregation, segmentation, and isolation.
+
+Snapshots - A snapshot provides a copy of the VM at a moment in time which you can use a backup.
+
+Benefits of snapshot - snapshots of systems prior to performing any risks operation.
+
+VDI/VDE - In a virtual desktop infrastructure(VDI) or Virtual desktop environment (VDE), a user's desktop operation system runs as a VM on a server.
+
+persistence in virtual desktops - Each user have a custom desktop image.
+
+benefits of persistence virtual desktops - users can customize and save their data.
+
+drawbacks of persistence virtual desktops - The amount of space required to store a persistence virtual desktop is a lot as different user's customize the desktop in different way.
+
+non-persistence virtual desktop - It a desktop which serves as same desktop for all users. When users access the desktop from server it provides a preconfigured snapshot.
+
+Risk associated with virtualization - The risk associated with virtualization is VM escape, Vm sprawl.
+
+VM escape - It is an attack that allows an attacker to access the host system from within the virtual system.
+
+VM escape working - The attacker run the code on the virtual system and interact with the hypervisor.
+
+VM sprawl - It occurs when an organization has many VMs that aren't managed properly.
+
+Example of VM sprawl - Beta or testing virtual machines deployed on the server remain unpatched and vulnerable to attack. 
+Un authorized VMs are added to physical server, they can consume system resources.
+
+switches in command line - It allows user to include an option that modifies the command to perform a different function.
+
+switch for windows command line - The windows command line uses slash(/) or dash(-) for switch.
+
+switch for Linux command line - The Linux command line uses dash(-) as a switch.
+It also uses pipe(|) to run multiple commands.
+
+windows commands case sensitive - No, Windows command are not case sensitive.
+
+Linux command case sensitive - Yes, Linux commands are case sensitive.
+
+ping command - It is a basic command used to test connectivity for remote systems.
+
+protocol used for ping - The Ping command uses internet control message protocol(ICMP) echo request packets to check connectivity.
+
+Ping to check Name Resolution - A computer will query a Domain Name System with the host name and DNS will respond with and IP address.
+
+pings and firewalls - Many denial-of-service attacks use ICMP to disrupt services on internet-based system. Firewalls commonly block the ICMP traffic to prevent these attacks.
+
+Ping to check the security posture - Administrators use ping to check connectivity of remote systems and verify name resolution is working. They also ping to check the security posture of systems and networks by verifying that routers, firewalls, and IPSs block ICMP traffic when configured to do so.
+
+IPCONFIG - The ipconfig command (short for internet protocol configuration ) shows the Transmission Control Protocol/Internet protocol (TCP/IP) configuration information for a system.
+
+IFCONFIG - The Linux-based systems use ifconfig. It has more capabilities than ipconfig.
+
+Common commands for ipconfig - ipconfig - basic information
+ipconfig/all - All information.
+ipconfig/displaydns - Contents of DNS cache.
+ipconfig/flushdns - erase the contents of DNS cache.
+
+Common commands for ifconfig - ifconfig eth0 -show first NIC
+ifconfig eth0 promisc - enables promiscuous mode. Allows a NIC to process all traffic it reveives.
+ifconfig eth0 allmulti - enables multicast mode. Allows NIC to process all multicast traffic received.
+
+Linux developers recommendation regarding ip command. - It is more preferable.
+
+Netstat - It allow user to view statistics for TCP/IP protocls on a system.
+
+Common commands for netstat - Netstat, Netstat -a, Netstat -r, Netstat -e, Netstat -e, Netstat -n, Netstat -p.
+
+Netstat command - Displays all open connection
+
+Netstat -a command - All TCP and UDP ports and all open connection.
+
+Netstat -r - Displays the routing table
+
+Netstat -e - Displays network statistics
+
+Netstat -s - displays statistics for specific or each protocol
+
+Netstat -n - Displays addresses and port numbers in numerical form.
+
+Netstat -p - Statistics r specific protocol.
+
+Netstat -anp - It displays the state of the connection
+
+The common states of a connection - ESTABLISHED, LISTEN, CLOSE_WAIT, TIME_WAIT, SYN_SENT, SYN_RECEIVED.
+
+Established state - An active open connection.
+
+Listen state - A waiting connection request.
+
+CLOSE_WAIT state - Waiting for connection termination request.
+
+TIME_WAIT state - Waiting for acknowledgement of the connection.
+
+SYN_SENT - TCP SYN waiting for the SYN-ACL response
+
+SYN-RECEIVED - TCP SYN-ACK is sent after receiving a SYN packet.
+
+Tracert - A command that determines the route data takes to get to a particular destination.
+
+Hop - Each router jump or switch is referred as hop.
+
+Troubleshooting with tracert or traceroute - It determine packet loss and giving an insight where the problem has occured.
+
+common commands for tracert - tracert DOMAIN, tracert -d DOMAIN
+
+tracert command - It identifies the hops between system, and identify that RTTs are longer than others.
+
+tracert -d command - The -d switch forces tracert to not resolve IP address to host names and making it quick to finish
+
+ARP - Address Resolution Protocol. An Internet protocol used to map an IP address to a MAC address. Defined in RFC 826.
+
+Common commands for arp - arp, arp -a
+
+arp on windows - arp -> shows help window
+arp -a -> shows arp cache on windows
+
+arp on Linux - arp -> shows the arp cache on linux.
+arp -a 'IP' -> Displays the arp cache entry for the specific IP address.
+
+benefit of arp - It can be used to identify the mac address of other systems.
